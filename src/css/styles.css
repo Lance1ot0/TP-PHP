@@ -1,0 +1,371 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden; /* Hide scrollbars */
+    cursor: none;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+.example {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+input {
+    margin: 6px 0px;
+}
+
+input:hover {
+    cursor: none;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 3.5rem;
+    border-bottom: solid white 1px;
+    padding: 10px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.input-form-field {
+    all: unset;
+    padding: 4px 8px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 4px;
+    color: black;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+label:hover {
+    cursor: none;
+}
+
+a, label, h1 {
+    user-select: none;
+}
+
+.post-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.posts {
+    width: 100%;
+    height: 300px;
+    border: solid white 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: auto;
+    padding: 50px 10px;
+    margin-bottom: 18px;
+}
+
+.posts::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+  
+.posts::-webkit-scrollbar-track {
+    background: black; /* color of the tracking area */
+}
+
+.posts::-webkit-scrollbar-thumb {
+    background-color: black; /* color of the scroll thumb */
+    border: 3px solid white; /* creates padding around scroll thumb */
+}
+
+.post-box{
+    display: flex;
+    padding: 8px;
+    border: solid white 1px;
+    margin: 10px 0px;
+}
+
+.delete-button {
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: none;
+}
+
+.post-infos {
+    padding: 6px 32px;
+}
+
+.post-content {
+    word-wrap: break-word;
+}
+
+.user {
+    margin-bottom: 10px;
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+}
+/*---------- background style ----------*/
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+/*---------- cursor style ----------*/
+
+.cursor {
+    z-index: 999;
+    position: fixed;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    pointer-events: none;
+    display: none;
+    border-radius: 2px;
+    rotate: 45deg;
+    border: solid black 1px;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    border: solid white 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transform: translate(-32%, -32%);
+    opacity: 0.6;
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    border: solid white 1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transform: translate(-36%, -36%);
+    opacity: 0.4;
+}
+
+/*---------- a Link style ----------*/
+
+
+a::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+  
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(255, 255, 255);
+    z-index: -1;
+    transition: transform .6s ease;
+
+}
+  
+a {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 6px;
+}
+
+a:hover {
+    color: black;
+    cursor: none;
+}
+
+/*---------- Button-form style ----------*/
+
+.submit-form{
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-bottom: 32px;
+    border: solid white 1px;
+    font-size: 1.2rem;
+    padding: 10px 18px;
+    background-color: black;
+    color: white;
+}
+.submit-form:hover{
+    background: white;
+    color: #050801;
+    box-shadow: 0 0 5px white,
+                0 0 25px white,
+                0 0 50px white,
+                0 0 200px white;
+}
